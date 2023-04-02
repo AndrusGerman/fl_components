@@ -11,15 +11,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Components',
-      home: ListView1Screen(
-        options: [
-          'Example 1',
-          'Example 2',
-          'Example 3',
-          'Example 4',
-          'Example 5',
-        ],
-      ),
+      home: ListView1Screen(),
     );
   }
 }

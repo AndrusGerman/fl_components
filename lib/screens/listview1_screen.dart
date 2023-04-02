@@ -19,7 +19,13 @@ class ListView1Screen extends StatelessWidget {
       appBar: AppBar(title: const Text('Listview Tipo 1')),
       body: ListView.separated(
           itemBuilder: (context, index) {
-            return Text('${options[index]} $index');
+            return ListTile(
+               title:  Text('${options[index]} $index'),
+               trailing: const Icon(Icons.arrow_forward_ios),
+               onTap: () {
+                 print('Click on ${index}');
+               },
+            );
           },
           separatorBuilder: (context, index) => const Divider(),
           itemCount: options.length),
