@@ -11,8 +11,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Components',
-      initialRoute: 'listview',
+      initialRoute: 'home',
       routes: {
+        'home':(context) => const HomeScreen(),
         'listview': (BuildContext context) => const ListViewScreen(),
         'alert': (BuildContext context) => const AlertScreen(),
         'card': (BuildContext context) => const CardScreen(),
