@@ -8,6 +8,8 @@ class CustomCardType2 extends StatelessWidget {
     return Card(
       clipBehavior: Clip.antiAlias,// Evita que los elementos se salgan, como las imagenes
       elevation: 10,
+
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
       child: Column(
         children: [
           const FadeInImage(
