@@ -39,7 +39,7 @@ class HomeScreenRouteItem extends StatelessWidget {
       onTap: () {
         Navigator.pushNamed(context, option.route);
       },
-      leading: Icon(option.icon),
+      leading: Icon(option.icon,color: Colors.indigo),
     );
   }
 }
