@@ -15,12 +15,24 @@ class AppTheme {
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(
         foregroundColor: primaryColor
-      )
+      ),
     ),
 
 
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
-      backgroundColor: primaryColor
+      backgroundColor: primaryColor,
+    ),
+
+
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: primaryColor,
+        shape: const StadiumBorder(),
+        elevation: 0,
+      )
     )
+
+
+
   );
 }
