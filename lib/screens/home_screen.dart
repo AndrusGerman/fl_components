@@ -1,4 +1,5 @@
-import 'package:fl_components/screens/screens.dart';
+import 'package:fl_components/models/menu_option.dart';
+import 'package:fl_components/router/app_routes.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -12,18 +13,33 @@ class HomeScreen extends StatelessWidget {
         elevation: 0,
       ),
       body: ListView.separated(
-        itemBuilder: (context, index) => ListTile(
-          title: Text('$index'),
-          onTap: () {
-
-            Navigator.pushNamed(context, '$index');
-
-          },
-          leading: const Icon(Icons.account_balance),
-        ),
+        itemBuilder: (context, index) {
+          final option = AppRoutes.menuOptions[index];
+          return HomeScreenRouteItem(option: option);
+        },
         separatorBuilder: (context, index) => const Divider(),
-        itemCount: 100,
+        itemCount: AppRoutes.menuOptions.length,
       ),
+    );
+  }
+}
+
+class HomeScreenRouteItem extends StatelessWidget {
+  const HomeScreenRouteItem({
+    super.key,
+    required this.option,
+  });
+
+  final MenuOption option;
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      title: Text(option.name),
+      onTap: () {
+        Navigator.pushNamed(context, option.route);
+      },
+      leading: Icon(option.icon),
     );
   }
 }
