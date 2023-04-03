@@ -3,11 +3,16 @@ import 'package:flutter/material.dart';
 
 class AppRoutes {
   static const initialRoute = 'home';
-  
+
   static Map<String, Widget Function(BuildContext)> routes = {
     'home': (context) => const HomeScreen(),
     'listview': (BuildContext context) => const ListViewScreen(),
     'alert': (BuildContext context) => const AlertScreen(),
     'card': (BuildContext context) => const CardScreen(),
+  };
+
+  static Route<dynamic>? Function(RouteSettings) onGenerateRoute = (settings) {
+    return MaterialPageRoute(
+        builder: (context) => DynamicScreen(route: settings.name ?? ''));
   };
 }
