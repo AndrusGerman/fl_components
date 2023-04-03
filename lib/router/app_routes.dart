@@ -11,8 +11,8 @@ class AppRoutes {
     'card': (BuildContext context) => const CardScreen(),
   };
 
-  static Route<dynamic>? Function(RouteSettings) onGenerateRoute = (settings) {
+  static Route<dynamic> onGenerateRoute(settings) {
     return MaterialPageRoute(
         builder: (context) => DynamicScreen(route: settings.name ?? ''));
-  };
+  }
 }
