@@ -1,5 +1,6 @@
 import 'package:fl_components/models/menu_option.dart';
 import 'package:fl_components/router/app_routes.dart';
+import 'package:fl_components/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -38,7 +39,7 @@ class HomeScreenRouteItem extends StatelessWidget {
       onTap: () {
         Navigator.pushNamed(context, option.route);
       },
-      leading: Icon(option.icon,color: Colors.indigo),
+      leading: Icon(option.icon,color: AppTheme.primaryColor),
     );
   }
 }
