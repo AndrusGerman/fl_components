@@ -1,3 +1,4 @@
+import 'package:fl_components/screens/dynamic_screen.dart';
 import 'package:fl_components/screens/screens.dart';
 import 'package:flutter/material.dart';
 
@@ -17,6 +18,9 @@ class MyApp extends StatelessWidget {
         'listview': (BuildContext context) => const ListViewScreen(),
         'alert': (BuildContext context) => const AlertScreen(),
         'card': (BuildContext context) => const CardScreen(),
+      },
+      onGenerateRoute: (settings) {
+        return MaterialPageRoute(builder: (context) => DynamicScreen(route: settings.name??''));
       },
     );
   }

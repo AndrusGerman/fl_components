@@ -15,9 +15,8 @@ class HomeScreen extends StatelessWidget {
         itemBuilder: (context, index) => ListTile(
           title: Text('$index'),
           onTap: () {
-            final route = MaterialPageRoute(builder: (context) => const ListViewScreen());
 
-            Navigator.push(context, route);
+            Navigator.pushNamed(context, '$index');
 
           },
           leading: const Icon(Icons.account_balance),
