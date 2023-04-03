@@ -1,8 +1,6 @@
-import 'dart:js_util';
-
 import 'package:flutter/material.dart';
 
-class ListView1Screen extends StatelessWidget {
+class ListViewScreen extends StatelessWidget {
   final List<String> options = const [
     'Megaman',
     'Meta Gear',
@@ -11,13 +9,13 @@ class ListView1Screen extends StatelessWidget {
     'Minecraft',
   ];
 
-  const ListView1Screen({super.key});
+  const ListViewScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Listview Tipo 1'),
+        title: const Text('Listview'),
         elevation: 0,
         backgroundColor: Colors.indigo,
       ),
@@ -27,7 +25,6 @@ class ListView1Screen extends StatelessWidget {
               title: Text('${options[index]} $index'),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () {
-                print('Click on ${index}');
               },
             );
           },
