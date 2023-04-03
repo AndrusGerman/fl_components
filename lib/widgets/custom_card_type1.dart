@@ -21,7 +21,7 @@ class CustomCardType1 extends StatelessWidget {
           ),
 
           Padding(
-            padding: const EdgeInsets.only(right: 5),
+            padding: const EdgeInsets.only(right: 5,bottom: 5),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
