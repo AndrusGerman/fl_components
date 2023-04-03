@@ -12,7 +12,13 @@ class AlertScreen extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {},
-          child: const Text('Mostrar alerta'),
+          child: const Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: 20,
+              vertical: 10,
+            ),
+            child: Text('Mostrar alerta', style: TextStyle(fontSize: 20)),
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
